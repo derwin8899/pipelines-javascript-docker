@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: derwinpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: derwinpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: derwinpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: derwinpipelinesjavascriptdocker 
+          image: udemy1.azurecr.io/derwinpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
